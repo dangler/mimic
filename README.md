@@ -5,6 +5,7 @@ Python app for mimicking rest servicess
 mimic is a python app for quickly standing up a temporary rest service to be used for testing consumers.
 
 # Dependencies
+- python3
 - json-schema
 - flask
 
