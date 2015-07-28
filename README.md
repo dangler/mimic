@@ -5,12 +5,13 @@ Python app for mimicking rest servicess
 mimic is a python app for quickly standing up a temporary rest service to be used for testing consumers.
 
 # Dependencies
-json-schema
-flask
+- json-schema
+- flask
 
 # Usage
 python3 mimic clients.json
-    clients.json must validate using the following json-schema
+
+clients.json must validate using the following json-schema
    
 ```json
 {
@@ -57,6 +58,8 @@ python3 mimic clients.json
 - document how to use
 - document required json format
 - setup version, features list, etc.
+- add support for params and varying api schemas
+- clean up README
 
 # Example contract.json file
 ```json
