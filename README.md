@@ -9,49 +9,9 @@ mimic is a python app for quickly standing up a temporary rest service to be use
 - flask
 
 # Usage
-python3 mimic clients.json
+python3 mimic contracts.json
 
-clients.json must validate using the following json-schema
-   
-```json
-{
-  "type": "array",
-  "items": {
-    "type": "object",
-    "minItems": 1,
-    "uniqueItems": true,
-    "properties": {
-      "description": {
-        "type": "string"
-      },
-      "request": {
-        "type": "object",
-        "properties": {
-          "method": { "type": "string" },
-          "path": { "type": "string" }
-        },
-        "required": ["method", "path"]
-      },
-      "response": {
-        "type": "object",
-        "properties": {
-          "body": { "type": "object" },
-          "headers": {
-            "type": "object",
-            "properties": {
-              "Content-Type": { "type": "string"}
-            },
-            "required": ["Content-Type"]
-          },
-          "status": { "type": "integer" }
-        },
-        "required": ["body", "headers", "status"]
-      }
-    },
-    "required": ["description", "request", "response"]
-  }
-}
-```
+contracts.json must validate using the following json-schema in contracts-schema.json
 
 # Todo
 - create build for dist
@@ -61,7 +21,7 @@ clients.json must validate using the following json-schema
 - add support for params and varying api schemas
 - clean up README
 
-# Example contract.json file
+# Example contracts.json file
 ```json
 [
   {
