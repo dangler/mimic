@@ -16,6 +16,7 @@ app = Flask(__name__)
 responses = {}
 
 def respond():
+
     # get body and response
     body = json.dumps(responses[request.path + ":" + request.method]['body'])
     status = responses[request.path + ":" + request.method]['status']
@@ -24,7 +25,6 @@ def respond():
     response = make_response(body, status)
 
     # load headers
-    pprint(responses[request.path + ":" + request.method]['headers'])
     for key, value in responses[request.path + ":" + request.method]['headers'].items():
         response.headers[key] = value
 

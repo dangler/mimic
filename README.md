@@ -124,7 +124,7 @@ python3 mimic clients.json
     "description": "Show User (user found)",
     "request": {
       "method": "GET",
-      "path": "/user/show?id=5"
+      "path": "/user/show/5"
     },
     "response": {
       "body": {
@@ -153,7 +153,7 @@ python3 mimic clients.json
     "description": "Show User (unauthorized to view user)",
     "request": {
       "method": "GET",
-      "path": "/user/show?id=6"
+      "path": "/user/show/6"
     },
     "response": {
       "body": {
